@@ -9,7 +9,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "harper_ls", "lua_ls", "millet", "pylsp", "ts_ls" },
+        ensure_installed = { "harper_ls", "lua_ls", "millet", "pylsp", "ts_ls", "eslint" },
       })
     end,
   },
@@ -33,6 +33,9 @@ return {
         capabilities = capabilities,
       })
       lspconfig.ts_ls.setup({
+        capabilities = capabilities,
+      })
+      lspconfig.eslint.setup({
         capabilities = capabilities,
       })
 
